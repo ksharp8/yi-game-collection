@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>命理起名-原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta ">
+<meta name="description" content="meta ">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+</head>
+<body>
+    <div style="font-size:88px;text-align:center;margin: 5% auto">生辰八字</div>
+    <div style="text-align: center">
+        <select style="font-size:88px;width:50%;text-align:center">
+            <option>一月</option>
+            <option>二月</option>
+            <option>三月</option>
+            <option>四月</option>
+            <option>五月</option>
+            <option>六月</option>
+            <option>七月</option>
+            <option>八月</option>
+            <option>九月</option>
+            <option>十月</option>
+            <option>十一月</option>
+            <option>十二月</option>
+        </select>
+    </div>
+    <div style="font-size:88px;text-align:center;margin: 15% auto 5% auto">属相</div>
+    <div style="text-align:center">
+        <select style="font-size:88px;width:50%;text-align:center">
+            <option>鼠</option>
+            <option>牛</option>
+            <option>虎</option>
+            <option>兔</option>
+            <option>龙</option>
+            <option>蛇</option>
+            <option>马</option>
+            <option>羊</option>
+            <option>猴</option>
+            <option>鸡</option>
+            <option>狗</option>
+            <option>猪</option>
+        </select>
+    </div>
+    <div style="text-align:center;margin-top:40%">
+        <button style="font-size:88px" onclick="qimin()">起名</button>
+    </div>
+    <div id="xm" style="font-size:88px;text-align:center;margin-top: 10%;">
+    </div>
+    <script>
+        function qimin(){
+           
+            //取姓和名
+            var xin = ['李','王','张','刘','陈','杨','赵','黄','周','吴','徐','孙','胡','朱','高','林','何','郭','马','罗','梁','宋','郑','谢','韩','唐','冯','董','萧','程','曹','袁','邓','许','傅','沈','曾','彭','吕','苏','卢','蒋','蔡','贾','丁','魏','薛','叶','阎','余','潘','杜','戴','夏','钟','汪','田','任','姜','范','方','石','姚','谭','廖','邹','熊','金','陆','郝','孔','白'];
+            var min = ['⾔','⽟','意','泽','彦','轩','景','正','程','诚','澄','安','青','泽','轩','旭','恒','思','宇','嘉','宏','皓','成','宇','轩','玮','桦','宇','达','韵','磊','泽','博','昌','信','彤','逸','柏','新','劲','鸿','⽂','恩','远','翰','圣','哲','家','林','景','⾏','律','本','乐','康','昊','宇','麦','冬','景','武','茂','才','军','林','茂','飞','昊','明','天','伦','峰','志','⾠','亦','佳','彤','⾃','怡','颖','宸','雅','微','⽻','馨','思','纾','欣','元','凡','晴','玥','宁','佳','蕾','桑','妍','萱','宛','欣','灵','烟','⽂','柏','艺','以','如','雪','璐','⾔','青','安','昕','淑','雅','颖','云','艺','忻','梓','江','丽','梦','雪','沁','思','⽻','雅','访','烟','萱','忆','慧','娅','茹','嘉','幻','⾠','妍','⾬','蕊','欣','芸','亦'];
+            var xin_sum = xin.length-1;
+            var min_sum = min.length-1;
+
+            var xm = document.getElementById('xm');
+
+            xm.removeChild(xm.childNodes[0]);
+
+            //取随机数
+            var seed = (Math.round(Math.random()*10)*100+143)%xin_sum;
+            var seed1 = (Math.round(Math.random()*10)*100+143)%min_sum;
+            var seed2 = (Math.round(Math.random()*10)*100+143)%min_sum;
+
+            //显示名字
+            var txt=document.createTextNode(xin[seed]+min[seed1]+min[seed2]);
+            xm.appendChild(txt);
+            //console.log(seed);
+        }
+       
+    </script>
+</body>
+</html>

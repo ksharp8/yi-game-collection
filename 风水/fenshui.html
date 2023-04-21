@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>风水翻翻乐-原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta 风水">
+<meta name="description" content="meta 一款风水翻牌游戏">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+</head>
+<body>
+    <div style="text-align:center;font-size:128px">后天八卦</div>
+    <div style="font-size: 128px;margin-top: 30%;margin-left: 3%;">
+        <span id='z1' onclick="dongnan()" style="width:33%;padding: 5% 0;border: 1px solid red;">东南</span>
+        <span id='z2' onclick="nan()"  style="width:33%;padding: 5% 0;border: 1px solid red;">南方</span>
+        <span id='z3' onclick="xinan()"  style="width:33%;padding: 5% 0;border: 1px solid red;">西南</span>
+    </div>
+    <div style="font-size: 128px;margin:15% auto;margin-left: 3%;">
+        <span id='z4' onclick="dong()"  style="width:33%;padding: 5% 0;border: 1px solid red;">东方</span>
+        <span style="width:33%;padding: 5% 0">中央</span>
+        <span id='z6'  onclick="xi()" style="width:33%;padding: 5% 0;border: 1px solid red;">西方</span>
+    </div>
+    <div style="font-size: 128px;margin-left: 3%;">
+        <span id='z7'  onclick="dongbei()" style="width:33%;padding: 5% 0;border: 1px solid red;">东北</span>
+        <span id='z8'  onclick="bei()" style="width:33%;padding: 5% 0;border: 1px solid red;">北方</span>
+        <span id='z9'  onclick="xibei()" style="width:33%;padding: 5% 0;border: 1px solid red;">西北</span>
+    </div>
+    <script>
+        function dongnan(){
+            var z1 = document.getElementById('z1');
+            node1 = document.createTextNode('巽风');
+            z1.removeChild(z1.childNodes[0]);
+            z1.appendChild(node1);
+        }
+        function nan(){
+            var z2 = document.getElementById('z2');
+            node2 = document.createTextNode('离火');
+            z2.removeChild(z2.childNodes[0]);
+            z2.appendChild(node2);
+        }
+        function xinan(){
+            var z3 = document.getElementById('z3');
+            node3 = document.createTextNode('坤地');
+            z3.removeChild(z3.childNodes[0]);
+            z3.appendChild(node3);
+        }
+        function dong(){
+            var z4 = document.getElementById('z4');
+            node4 = document.createTextNode('震雷');
+            z4.removeChild(z4.childNodes[0]);
+            z4.appendChild(node4);
+        }
+        function xi(){
+            var z6 = document.getElementById('z6');
+            node6 = document.createTextNode('兑泽');
+            z6.removeChild(z6.childNodes[0]);
+            z6.appendChild(node6);
+        }
+        function dongbei(){
+            var z7 = document.getElementById('z7');
+            node7 = document.createTextNode('艮山');
+            z7.removeChild(z7.childNodes[0]);
+            z7.appendChild(node7);
+        }
+        function bei(){
+            var z8 = document.getElementById('z8');
+            node8 = document.createTextNode('坎水');
+            z8.removeChild(z8.childNodes[0]);
+            z8.appendChild(node8);
+        }
+        function xibei(){
+            var z9 = document.getElementById('z9');
+            node9 = document.createTextNode('乾天');
+            z9.removeChild(z9.childNodes[0]);
+            z9.appendChild(node9);
+        }
+    </script>
+</body>
+</html>

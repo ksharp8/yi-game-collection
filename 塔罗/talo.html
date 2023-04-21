@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>抽塔罗解性格-原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta 塔罗 性格 人格">
+<meta name="description" content="meta 一款塔罗牌解析性格的游戏">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+</head>
+<body>
+    <div style="margin-left:20%;margin-top:10%;color:pink;font-size:188px;border:5px solid pink;width:50%;text-align: center;">
+        塔<br>罗<br>牌
+    </div>
+    <div id = 'zhiye' style="text-align:center;font-size:88px;color:blue;visibility: hidden;">牌面</div>
+    <div id = 'chou' onclick='pick()' style="text-align:center;font-size:88px;border:1px solid gray;margin-top:50px">抽牌</div>
+    <div id = 'jie' onclick='jie_c()' style="text-align:center;font-size:88px;border:1px solid gray;margin-top:50px;display: none;">性格解读</div>
+    <div style="font-size: 48px;margin:10% 10%" id="jiedu"></div>
+    <script>
+        var arr = ['愚者','魔术师','女祭司','女皇','皇帝',
+                    '教皇','恋人','战车','力量','隐士',
+                    '命运之轮','正义','倒吊人','死神','节制',
+                    '恶魔','高塔','星星','月亮','太阳',
+                    '审判','世界'];
+        var seed = Math.round(Math.random()*100)%arr.length;
+        
+        function pick(){
+            var zhiye = arr[seed];
+            var node1 = document.getElementById('zhiye');
+            node1.removeChild(node1.childNodes[0]);
+            var txt1 = document.createTextNode(zhiye);
+            node1.appendChild(txt1);
+            node1.style.visibility='visible';
+            document.getElementById('chou').style.display="none";
+            document.getElementById('jie').style.display="block";
+        }
+        //seed = 0;
+        function jie_c(){
+            if(seed == 0){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('乐观、自由、热情、不受限制');
+                node2.appendChild(txt2);
+            }else if(seed == 1){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('创意、自信、沟通能力强、明朗清晰、聪明');
+                node2.appendChild(txt2);
+            }else if(seed == 2){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('直觉、理性、敏感、细腻、被动、清冷');
+                node2.appendChild(txt2);
+            }else if(seed == 3){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('母爱、富足、包容、温暖、丰盛、柔和、隐藏的掌控欲');
+                node2.appendChild(txt2);
+            }else if(seed == 4){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('强势、稳定、责任、男性、规则');
+                node2.appendChild(txt2);
+            }else if(seed == 5){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('精神导师、伦理、教育、道德、信仰');
+                node2.appendChild(txt2);
+            }else if(seed == 6){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('爱、选择、沟通、幸福');
+                node2.appendChild(txt2);
+            }else if(seed == 7){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('自信、行动力、拼搏、意志力、勇往直前');
+                node2.appendChild(txt2);
+            }else if(seed == 8){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('包容、掌控、内心强大、自信');
+                node2.appendChild(txt2);
+            }else if(seed == 9){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('独立、冷静、谨慎、智慧');
+                node2.appendChild(txt2);
+            }else if(seed == 10){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('宿命、运气、改变');
+                node2.appendChild(txt2);
+            }else if(seed == 11){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('公平、直接、黑白分明');
+                node2.appendChild(txt2);
+            }else if(seed == 12){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('牺牲、奉献、隐忍、另一个角度');
+                node2.appendChild(txt2);
+            }else if(seed == 13){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('毁灭性');
+                node2.appendChild(txt2);
+            }else if(seed == 14){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('平衡、练习、克制、对新领域的尝试');
+                node2.appendChild(txt2);
+            }else if(seed == 15){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('欲望、沉迷、诱惑、堕落、自我束缚');
+                node2.appendChild(txt2);
+            }else if(seed == 16){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('突变、迅速');
+                node2.appendChild(txt2);
+            }else if(seed == 17){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('希望、愿望、想象力');
+                node2.appendChild(txt2);
+            }else if(seed == 18){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('敏感、变动、不安全感、细腻');
+                node2.appendChild(txt2);
+            }else if(seed == 19){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('活力、生机、热情、阳光、童真、返璞归真');
+                node2.appendChild(txt2);
+            }else if(seed == 20){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('重生、总结、转机、回顾');
+                node2.appendChild(txt2);
+            }else if(seed == 21){
+                var node2 = document.getElementById('jiedu');
+                //node2.removeChild(node2.childNodes[0]);
+                var txt2 = document.createTextNode('完成、舒适');
+                node2.appendChild(txt2);
+            }
+        }
+        
+    </script>>
+</body>
+</html>

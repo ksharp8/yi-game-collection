@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>手机号吉凶-原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta 手机号 吉凶">
+<meta name="description" content="meta 一款测试手机号吉凶的游戏">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+</head>
+<body>
+    <div style="font-size: 128px;text-align:center">请输入手机号</div>
+    <div style="margin:10% auto"><input type="text" id="phone"style='width:100%;font-size:88px'></div>
+    <div style="text-align:center"><button type="button" onclick="jixiong()" style="font-size: 128px">查吉凶</button></div>
+    <div id="con" style="font-size: 88px;text-align:center"></div>
+    <script>
+        function jixiong(){
+            var phoneReg=/^[1][0-9]{10}$/; 
+            var haoma = document.getElementById('phone').value;
+            var con = document.getElementById('con');
+            if(phoneReg.test(haoma)){
+                con.innerText='';
+                //console.log(1);
+                if(haoma.indexOf('4')>=0 && haoma.indexOf('8')>=0){
+                    con.innerText='号码带8带4，吉凶参半';
+                }else if(haoma.indexOf('4')>=0 && haoma.indexOf('8')<0){
+                    con.innerText="号码带4，凶";
+                }else if(haoma.indexOf('4')<0 && haoma.indexOf('8')>=0){
+                    con.innerText="号码带8，吉";
+                }else{
+                    con.innerText='号码不带4不带8，普通号码';
+                }
+            }else {
+                con.innerText = '这不是一个手机号，请重新输入';
+            }
+            //console.log(haoma);
+        }
+        
+    </script>
+</body>
+</html>

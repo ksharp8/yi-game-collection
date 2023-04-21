@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>看年份猜生肖-原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta 年份 生肖">
+<meta name="description" content="meta 一款猜年份生肖的手机游戏">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+</head>
+<body>
+    <div style="font-size:88px">猜猜这一年出生的是哪个生肖？</div>
+    <div id="year" style="font-size:188px;text-align: center;color:red;padding: 20px auto;"></div>
+    <table border="1" cellpadding="20" style="font-size:168px">
+        <tr>
+            <td onclick="c()">鼠</td>
+            <td onclick="c()">牛</td>
+            <td onclick="c()">虎</td>
+            <td onclick="c()">兔</td>
+        </tr>
+        <tr>
+            <td onclick="c()">龙</td>
+            <td onclick="c()">蛇</td>
+            <td onclick="c()">马</td>
+            <td onclick="c()">羊</td>
+        </tr>
+        <tr>
+            <td onclick="c()">猴</td>
+            <td onclick="c()">鸡</td>
+            <td onclick="c()">狗</td>
+            <td onclick="c()">猪</td>
+        </tr>
+    </table>
+    <div id="shu" style="font-size:188px;text-align: center;color:red;padding: 20px auto;">&nbsp;</div>
+    <div id="xi" style="font-size:188px;text-align: center;color:red;padding: 20px auto;">&nbsp;</div>
+    <script>
+        var arr = ['1924','1936','1948','1960','1972','1984','1996','2008','2020',
+                    '1925','1937','1949','1961','1973','1985','1997','2009','2021',
+                    '1926','1938','1950','1962','1974','1986','1998','2010','2022',
+                    '1927','1939','1951','1963','1975','1987','1999','2011','2023',
+                    '1928','1940','1952','1964','1976','1988','2000','2012','2024',
+                    '1929','1941','1953','1965','1977','1989','2001','2013','2025',
+                    '1930','1942','1954','1966','1978','1990','2002','2014','2026',
+                    '1931','1943','1955','1967','1979','1991','2003','2015','2027',
+                    '1932','1944','1956','1968','1980','1992','2004','2016','2028',
+                    '1933','1945','1957','1969','1981','1993','2005','2017','2029',
+                    '1934','1946','1958','1970','1982','1994','2006','2018','2030',
+                    '1935','1947','1959','1971','1983','1995','2007','2019','2031',
+                ];
+        
+        var seed = Math.round(Math.random()*1000)%arr.length;
+      
+        var node = document.getElementById('year');
+
+        //node.removeChild(node.childNodes[0]);
+        var txt = document.createTextNode(arr[seed]);
+        node.appendChild(txt);
+
+        var node1 = document.getElementById('shu');
+
+        function c(){
+          
+            if(seed<=8){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('鼠');
+                node1.appendChild(txt);
+            }else if(seed>8 && seed <=17){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('牛');
+                node1.appendChild(txt);
+            }else if(seed>17 && seed <=26){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('虎');
+                node1.appendChild(txt);
+            }else if(seed>26 && seed <=35){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('兔');
+                node1.appendChild(txt);
+            }else if(seed>35 && seed <=44){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('龙');
+                node1.appendChild(txt);
+            }else if(seed>44 && seed <=53){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('蛇');
+                node1.appendChild(txt);
+            }else if(seed>53 && seed <=62){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('马');
+                node1.appendChild(txt);
+            }else if(seed>62 && seed <=71){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('羊');
+                node1.appendChild(txt);
+            }else if(seed>71 && seed <=80){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('猴');
+                node1.appendChild(txt);
+            }else if(seed>80 && seed <=89){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('鸡');
+                node1.appendChild(txt);
+            }else if(seed>89 && seed <=98){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('狗');
+                node1.appendChild(txt);
+            }else if(seed>98 && seed <=107){
+                node1.removeChild(node1.childNodes[0]);
+                var txt = document.createTextNode('猪');
+                node1.appendChild(txt);
+            }
+            para4.removeChild(para4.childNodes[0]);
+            setTimeout(r, 3000);
+        }
+
+        //倒计时
+        var para4 = document.getElementById('xi');
+        function j10(){
+            var no10 = document.createTextNode("10");
+            para4.replaceChild(no10,para4.childNodes[0]);
+            setTimeout(j9, 1000);
+        }
+        function j9(){
+            var no9 = document.createTextNode("9");
+            para4.replaceChild(no9,para4.childNodes[0]);
+            setTimeout(j8, 1000);
+        }
+        function j8(){
+            var no8 = document.createTextNode("8");
+            para4.replaceChild(no8,para4.childNodes[0]);
+            setTimeout(j7, 1000);
+        }
+        function j7(){
+            var no7 = document.createTextNode("7");
+            para4.replaceChild(no7,para4.childNodes[0]);
+            setTimeout(j6, 1000);
+        }
+        function j6(){
+            var no6 = document.createTextNode("6");
+            para4.replaceChild(no6,para4.childNodes[0]);
+            setTimeout(j5, 1000);
+        }
+        function j5(){
+            var no5 = document.createTextNode("5");
+            para4.replaceChild(no5,para4.childNodes[0]);
+            setTimeout(j4, 1000);
+        }
+        function j4(){
+            var no4 = document.createTextNode("4");
+            para4.replaceChild(no4,para4.childNodes[0]);
+            setTimeout(j3, 1000);
+        }
+        function j3(){
+            var no3 = document.createTextNode("3");
+            para4.replaceChild(no3,para4.childNodes[0]);
+            setTimeout(j2, 1000);
+        }
+        function j2(){
+            var no2 = document.createTextNode("2");
+            para4.replaceChild(no2,para4.childNodes[0]);
+            setTimeout(j1, 1000);
+        }
+        function j1(){
+            var no1 = document.createTextNode("1");
+            para4.replaceChild(no1,para4.childNodes[0]);
+            setTimeout(j0, 1000);
+        }
+        function j0(){
+            var no0 = document.createTextNode("0");
+            para4.replaceChild(no0,para4.childNodes[0]);
+            setTimeout(c, 1000);
+        } 
+        j10();
+        function r(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>天干四化猜星曜-原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta 紫微 斗数 四化星">
+<meta name="description" content="meta 一款根据紫微斗数猜四化星的游戏">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+</head>
+<body>
+    <div style="text-align:center;font-size: 108px;">天干:</div>
+    <div id="tiangan" style="text-align:center;font-size: 88px;margin:50px auto"></div>
+    <div style="text-align:center;font-size: 108px;">四化:</div>
+    <div id="sihua" style="text-align:center;font-size: 88px;margin:50px auto"></div>
+    <div style="text-align:center">
+        <button onclick='c()' type="button" value="看答案" style="font-size:88px">看答案</button>
+    </div>
+    <div style="font-size:88px;text-align: center;margin:50px auto;color:red" id="daan">
+        
+    </div>
+    <div style="font-size:88px;text-align: center" id="daans">
+        
+    </div>
+    <script>
+        var arr=['甲','乙','丙','丁','戊','己','庚','辛','壬','葵'];
+        var arr4=['化禄','化权','化科','化忌'];
+       
+        var seed =Math.floor(Math.random()*10);
+        var seed4 =Math.floor(Math.random()*10%4);
+
+        var node = document.getElementById('tiangan');
+        var node4 = document.getElementById('sihua');
+        var daan =document.getElementById('daan');
+
+        node.innerText=arr[seed];
+        node4.innerText=arr4[seed4];
+        
+        //答案
+        function c(){
+            if(seed==0 && seed4==0){
+                daan.innerText='廉贞';
+            }else if(seed==0 && seed4==1){
+                daan.innerText='破军';
+            }else if(seed==0 && seed4==2){
+                daan.innerText='武曲';
+            }else if(seed==0 && seed4==3){
+                daan.innerText='太阳';
+            }else if(seed==1 && seed4==0){
+                daan.innerText='天机';
+            }else if(seed==1 && seed4==1){
+                daan.innerText='天梁';
+            }else if(seed==1 && seed4==2){
+                daan.innerText='紫微';
+            }else if(seed==1 && seed4==3){
+                daan.innerText='太阴';
+            }else if(seed==2 && seed4==0){
+                daan.innerText='天同';
+            }else if(seed==2 && seed4==1){
+                daan.innerText='天机';
+            }else if(seed==2 && seed4==2){
+                daan.innerText='文昌';
+            }else if(seed==2 && seed4==3){
+                daan.innerText='廉贞';
+            }else if(seed==3 && seed4==0){
+                daan.innerText='太阴';
+            }else if(seed==3 && seed4==1){
+                daan.innerText='天同';
+            }else if(seed==3 && seed4==2){
+                daan.innerText='天机';
+            }else if(seed==3 && seed4==3){
+                daan.innerText='巨门';
+            }else if(seed==4 && seed4==0){
+                daan.innerText='贪狼';
+            }else if(seed==4 && seed4==1){
+                daan.innerText='太阴';
+            }else if(seed==4 && seed4==2){
+                daan.innerText='右弼';
+            }else if(seed==4 && seed4==3){
+                daan.innerText='天机';
+            }else if(seed==5 && seed4==0){
+                daan.innerText='武曲';
+            }else if(seed==5 && seed4==1){
+                daan.innerText='贪狼';
+            }else if(seed==5 && seed4==2){
+                daan.innerText='天梁';
+            }else if(seed==5 && seed4==3){
+                daan.innerText='文曲';
+            }else if(seed==6 && seed4==0){
+                daan.innerText='太阳';
+            }else if(seed==6 && seed4==1){
+                daan.innerText='武曲';
+            }else if(seed==6 && seed4==2){
+                daan.innerText='天府';
+            }else if(seed==6 && seed4==3){
+                daan.innerText='天同';
+            }else if(seed==7 && seed4==0){
+                daan.innerText='巨门';
+            }else if(seed==7 && seed4==1){
+                daan.innerText='太阳';
+            }else if(seed==7 && seed4==2){
+                daan.innerText='文曲';
+            }else if(seed==7 && seed4==3){
+                daan.innerText='文昌';
+            }else if(seed==8 && seed4==0){
+                daan.innerText='天梁';
+            }else if(seed==8 && seed4==1){
+                daan.innerText='紫微';
+            }else if(seed==8 && seed4==2){
+                daan.innerText='左辅';
+            }else if(seed==8 && seed4==3){
+                daan.innerText='武曲';
+            }else if(seed==9 && seed4==0){
+                daan.innerText='破军';
+            }else if(seed==9 && seed4==1){
+                daan.innerText='巨门';
+            }else if(seed==9 && seed4==2){
+                daan.innerText='太阴';
+            }else if(seed==9 && seed4==3){
+                daan.innerText='贪狼';
+            }
+            daans.innerHTML="<button onclick='javacsript:window.location.reload()' type='button' style='font-size:88px'>下一题</button>";
+        } 
+
+      
+    </script>
+</body>
+</html>
