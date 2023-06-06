@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>原创易算游戏-《玄学》</title>
+<meta charset="UTF-8" />
+<meta name="keywords" content="meta ">
+<meta name="description" content="meta ">
+<meta name="author" content="meta 玄月冰灵(张抿轩)ksharp8@qq.com">
+<style>
+    .l{font-size: 180px;}
+    .ll{font-size: 80px;}
+    .ml{margin-left: 50px;}
+</style>
+</head>
+<body>
+        <label class="l">八字排盘</label><br>
+        <select class="ll" id="l">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select class="ll ml" id="ll">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select><br>
+        <a onclick="life()" class="l" id="life">算命</a>
+<script>
+    l = document.getElementById('l').value;
+    ll = document.getElementById('ll').value;
+    //document.write('l');
+    //document.write('ll');
+    function life(){
+        localStorage.setItem("month", l);
+        localStorage.setItem("day", ll);
+        window.location.href='82.html';
+    }
+    
+</script>
+</body>
+</html>
